@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Крестики Нолики</string>
+    <string name="restart">Заново</string>
+    <string name="opponent">Оппонент</string>
+    <string name="ai">ИИ</string>
+    <string name="human">Человек</string>
+</resources>

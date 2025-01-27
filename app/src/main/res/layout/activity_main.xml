@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/general"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/app_name"
+        android:textSize="38sp"
+        android:textColor="@android:color/black"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="sans-serif-condensed"
+        android:shadowColor="#80000000"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="4"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:text="@string/opponent"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:text="@string/ai"/>
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/switchOpponent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textOff="@string/ai"
+            android:textOn="@string/human"
+            android:layout_marginBottom="30dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:text="@string/human"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/LayoutForButtons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="20dp">
+
+        <LinearLayout
+            android:id="@+id/LL1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="5dp">
+
+            <Button
+                android:id="@+id/button00"
+                style="@style/GameButton"
+                android:tag="00"
+                android:onClick="clickOnButton"
+                android:textSize="34sp"/>
+
+            <Button
+                android:id="@+id/button01"
+                style="@style/GameButton"
+                android:tag="01"
+                android:onClick="clickOnButton"
+                android:textSize="34sp"/>
+
+            <Button
+                android:id="@+id/button02"
+                style="@style/GameButton"
+                android:tag="02"
+                android:onClick="clickOnButton"
+                android:textSize="34sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/LL2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="5dp">
+
+            <Button
+                android:id="@+id/button10"
+                style="@style/GameButton"
+                android:tag="10"
+                android:onClick="clickOnButton"
+                android:textSize="34sp" />
+
+            <Button
+                android:id="@+id/button11"
+                style="@style/GameButton"
+                android:tag="11"
+                android:onClick="clickOnButton"
+                android:textSize="34sp"/>
+
+            <Button
+                android:id="@+id/button12"
+                style="@style/GameButton"
+                android:tag="12"
+                android:onClick="clickOnButton"
+                android:textSize="34sp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/LL3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="5dp">
+
+            <Button
+                android:id="@+id/button20"
+                style="@style/GameButton"
+                android:tag="20"
+                android:onClick="clickOnButton"
+                android:textSize="34sp"/>
+
+            <Button
+                android:id="@+id/button21"
+                style="@style/GameButton"
+                android:tag="21"
+                android:onClick="clickOnButton"
+                android:textSize="34sp"/>
+
+            <Button
+                android:id="@+id/button22"
+                style="@style/GameButton"
+                android:tag="22"
+                android:onClick="clickOnButton"
+                android:textSize="34sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/resultTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/green"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/restart" />
+
+    <Button
+        android:id="@+id/restart"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/ic_restart"
+        android:layout_marginTop="25dp" />
+
+</LinearLayout>
